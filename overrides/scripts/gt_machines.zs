@@ -60,6 +60,11 @@ alloy.recipeBuilder().inputs([<ore:dustNetherQuartz>*4,<minecraft:glass>*5]).out
 recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
 alloy.recipeBuilder().inputs([<ore:dustGlowstone>*2,<appliedenergistics2:quartz_glass>]).outputs([<appliedenergistics2:quartz_vibrant_glass>]).duration(50).EUt(16).buildAndRegister();
 
+//Glass
+arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:oxygen>*480]).outputs([<minecraft:glass>]).EUt(30).duration(480).buildAndRegister();
+plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.argon>]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:argon>]).EUt(10).duration(30).buildAndRegister();
+plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.nitrogen>*2]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:nitrogen>*2]).EUt(10).duration(30).buildAndRegister();
+
 //NuclearCraft Stuff
 recipes.remove(<nuclearcraft:reactor_casing_transparent>);
 alloy.recipeBuilder().inputs([<nuclearcraft:fission_block>,<minecraft:glass>]).outputs([<nuclearcraft:reactor_casing_transparent>]).duration(50).EUt(16).buildAndRegister();
@@ -130,6 +135,27 @@ hammer.recipeBuilder().inputs([<appliedenergistics2:fluix_block>]).outputs([<app
 
 //Storage Drawers
 saw.recipeBuilder().inputs([<ore:drawerTrim>]).outputs([<storagedrawers:upgrade_template>*2]).EUt(4).duration(50).buildAndRegister();
+alloy.recipeBuilder().inputs([<ore:ingotGold>*2, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:drawer_key>]).EUt(8).duration(400).buildAndRegister();
+assembler.recipeBuilder().inputs([<storagedrawers:drawer_key>, <ore:gemEnderEye>]).outputs([<storagedrawers:shroud_key>]).EUt(4).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<storagedrawers:drawer_key>, <minecraft:name_tag>]).outputs([<storagedrawers:personal_key>]).EUt(4).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<storagedrawers:drawer_key>, <ore:bookWritable>]).outputs([<storagedrawers:quantify_key>]).EUt(4).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:paper>*3, <ore:slimeball>]).outputs([<storagedrawers:tape>]).EUt(4).duration(400).buildAndRegister();
+
+// Upgrades
+assembler.recipeBuilder().inputs([<ore:plateBronze>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_storage>]).EUt(8).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:plateSteel>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_storage:1>]).EUt(8).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:plateStainlessSteel>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_storage:2>]).EUt(8).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:plateTitanium>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_storage:3>]).EUt(8).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:plateTungstenSteel>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_storage:4>]).EUt(8).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:gemFlint>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_one_stack>]).EUt(8).duration(200).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:obsidian>*8, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_void>]).EUt(8).duration(400).buildAndRegister();
+
+assembler.recipeBuilder().inputs([<ore:stickWood>*4, <ore:craftingRedstoneTorch>*2, <ore:dustRedstone>*2, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_status>]).EUt(16).duration(325).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:stickWood>*4, <projectred-integration:gate:26>*2, <ore:dustRedstone>*2, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_status:1>]).EUt(16).duration(325).buildAndRegister();
+
+assembler.recipeBuilder().inputs([<ore:stickWood>*4, <ore:dustRedstone>*4, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_redstone>]).EUt(16).duration(250).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:stickWood>*5, <ore:dustRedstone>*3, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_redstone:1>]).property("circuit",6).EUt(16).duration(250).buildAndRegister();
+assembler.recipeBuilder().inputs([<ore:stickWood>*5, <ore:dustRedstone>*3, <storagedrawers:upgrade_template>]).outputs([<storagedrawers:upgrade_redstone:2>]).property("circuit",7).EUt(16).duration(250).buildAndRegister();
 
 //AE2 Recipes
 assembler.recipeBuilder().inputs([<appliedenergistics2:part:140>*2,<ore:dustFluix>]).outputs(<appliedenergistics2:part:16>).EUt(8).duration(30).buildAndRegister();
@@ -204,7 +230,6 @@ bath.recipeBuilder().inputs([<minecraft:red_mushroom>]).fluidInputs([<liquid:mil
 reactor.recipeBuilder().notConsumable(<minecraft:mycelium>).fluidInputs([<liquid:water>*1000]).fluidOutputs([<liquid:witchwater>*1000]).EUt(4).duration(80).buildAndRegister();
 
 //Hopper replacement
-recipes.replaceAllOccurences(<minecraft:hopper>, <pneumaticcraft:omnidirectional_hopper>);
 assembler.findRecipe(2,[<gregtech:meta_item_1:12033>*5,<minecraft:chest>],[null]).remove();
 assembler.findRecipe(2,[<gregtech:meta_item_1:12197>*5,<minecraft:chest>],[null]).remove();
 assembler.findRecipe(2,[<gregtech:meta_item_1:12033>*5,<minecraft:trapped_chest>],[null]).remove();

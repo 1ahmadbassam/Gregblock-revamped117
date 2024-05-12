@@ -138,6 +138,10 @@ mods.jei.JEI.removeAndHide(<exnihilocreatio:block_axle_stone>);
 mods.jei.JEI.removeAndHide(<exnihilocreatio:block_grinder>);
 
 //AE2
+mods.jei.JEI.hideCategory("appliedenergistics2.grinder");
+mods.jei.JEI.hideCategory("appliedenergistics2.condenser");
+mods.jei.JEI.hideCategory("appliedenergistics2.inscriber");
+
 //GT Silicon only
 furnace.remove(<appliedenergistics2:material:5>);
 mods.jei.JEI.hide(<appliedenergistics2:material:5>);
@@ -485,6 +489,8 @@ mods.jei.JEI.removeAndHide(<gregtech:machine:526>);
 mods.jei.JEI.removeAndHide(<gregtech:machine:527>);
 mods.jei.JEI.removeAndHide(<gregtech:metal_casing:8>);
 
+mods.jei.JEI.hideCategory("gregtech:coke_oven");
+
 //Ceramics
 //Porcelain
 furnace.remove(<ceramics:unfired_clay:5>);
@@ -766,6 +772,18 @@ mods.jei.JEI.removeAndHide(<nuclearcraft:turbine_rotor_blade_sic_sic_cmc>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:turbine_rotor_stator>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:turbine_rotor_bearing>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:turbine_dynamo_coil:*>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:heat_exchanger_condenser_tube_copper>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:heat_exchanger_condenser_tube_hard_carbon>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:heat_exchanger_condenser_tube_thermoconducting>);
+
+
+mods.jei.JEI.hideCategory("nuclearcraft_active_cooler");
+mods.jei.JEI.hideCategory("nuclearcraft_collector");
+mods.jei.JEI.hideCategory("nuclearcraft_coolant_heater");
+mods.jei.JEI.hideCategory("nuclearcraft_heat_exchanger");
+mods.jei.JEI.hideCategory("nuclearcraft_high_turbine");
+mods.jei.JEI.hideCategory("nuclearcraft_condenser");
+
 
 //Cells
 recipes.remove(<nuclearcraft:voltaic_pile_basic>);
@@ -965,6 +983,8 @@ mods.jei.JEI.removeAndHide(<excompressum:auto_compressor_rationing>);
 mods.jei.JEI.hide(<excompressum:chicken_stick>);
 mods.jei.JEI.hide(<excompressum:iron_mesh>);
 
+mods.jei.JEI.hideCategory("excompressum:chickenStick");
+
 //Storage Drawers
 //Drawer Recipe Changes
 mods.jei.JEI.removeAndHide(<storagedrawers:basicdrawers:*>);
@@ -991,6 +1011,13 @@ recipes.addShaped(<storagedrawers:controller>,[
 [<ore:stone>,<storagedrawers:customdrawers:*>,<ore:stone>],
 [<ore:stone>,<ore:gemDiamond>,<ore:stone>]
 ]);
+recipes.remove(<storagedrawers:compdrawers>);
+recipes.addShaped(<storagedrawers:compdrawers>, [
+[<ore:stoneSmooth>, <ore:stoneSmooth>, <ore:stoneSmooth>],
+[<gregtech:meta_item_1:32640>, <storagedrawers:customdrawers:*>, <gregtech:meta_item_1:32640>], 
+[<ore:stoneSmooth>, <ore:circuitBasic>, <ore:stoneSmooth>]
+]);
+
 
 //Upgrade Recipe Changes
 recipes.remove(<storagedrawers:upgrade_template>);
@@ -1466,6 +1493,11 @@ mods.jei.JEI.removeAndHide(<pneumaticcraft:kerosene_lamp>);
 mods.jei.JEI.removeAndHide(<pneumaticcraft:unassembled_pcb>);
 mods.jei.JEI.removeAndHide(<pneumaticcraft:failed_pcb>);
 
+mods.jei.JEI.hideCategory("pneumaticcraft.thermo_pneumatic");
+mods.jei.JEI.hideCategory("pneumaticcraft.refinery");
+mods.jei.JEI.hideCategory("pneumaticcraft.uv_light_box");
+
+
 //Replace The Vanilla Hopper
 mods.jei.JEI.removeAndHide(<minecraft:hopper>);
 recipes.remove(<pneumaticcraft:omnidirectional_hopper>);
@@ -1734,6 +1766,14 @@ mods.jei.JEI.removeAndHide(<forestry:bronze_shovel>);
 mods.jei.JEI.removeAndHide(<forestry:bronze_pickaxe>);
 mods.jei.JEI.removeAndHide(<forestry:kit_shovel>);
 mods.jei.JEI.removeAndHide(<forestry:kit_pickaxe>);
+mods.jei.JEI.hideCategory("forestry.bottler");
+mods.jei.JEI.hideCategory("forestry.centrifuge");
+mods.jei.JEI.hideCategory("forestry.fabricator");
+mods.jei.JEI.hideCategory("forestry.fermenter");
+mods.jei.JEI.hideCategory("forestry.squeezer");
+mods.jei.JEI.hideCategory("forestry.still");
+mods.jei.JEI.hideCategory("binnie.extratrees.lumbermill");
+
 
 //GregTech
 //No Rubber Trees in This Pack
