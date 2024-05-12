@@ -23,7 +23,6 @@ val electrolyzer = RecipeMap.getByName("electrolyzer");
 val circuit_assembler = RecipeMap.getByName("circuit_assembler");
 val implosion = RecipeMap.getByName("implosion_compressor");
 val engraver = RecipeMap.getByName("laser_engraver");
-val attractor = RecipeMap.getByName("attractor");
 val packer = RecipeMap.getByName("packer");
 val unpacker = RecipeMap.getByName("unpacker");
 val arc = RecipeMap.getByName("arc_furnace");
@@ -34,11 +33,6 @@ val centrifuge = RecipeMap.getByName("centrifuge");
 
 //Ex Nihilo
 hammer.findRecipe(8,[<minecraft:cobblestone>],[null]).remove();
-
-macerator.findRecipe(12,[<minecraft:cobblestone>],[null]).remove();
-macerator.findRecipe(12,[<minecraft:cobblestone>],[null]).remove();
-
-macerator.findRecipe(8,[<minecraft:gravel>],[null]).remove();
 
 hammer.recipeBuilder().inputs([<ore:cobblestone>]).outputs([<minecraft:gravel>]).duration(16).EUt(10).buildAndRegister();
 hammer.recipeBuilder().inputs([<ore:gravel>]).outputs([<minecraft:sand>]).duration(16).EUt(10).buildAndRegister();
@@ -125,12 +119,10 @@ furnace.addRecipe(<appliedenergistics2:material>,<gregblockutils:gb_meta_item:22
 furnace.addRecipe(<appliedenergistics2:material>,<gregblockutils:gb_meta_item:3202>);
 sifter.findRecipe(12800,[<gregtech:meta_item_1:6202>],[null]).remove();
 sifter.recipeBuilder().inputs([<ore:crushedPurifiedCertusQuartz>]).chancedOutput(<gregtech:meta_item_2:23202>,2000,0).chancedOutput(<gregtech:meta_item_2:25202>,100,0).chancedOutput(<gregtech:meta_item_1:4202>,5000,0).chancedOutput(<appliedenergistics2:material>,1500,0).chancedOutput(<gregtech:meta_item_2:22202>,4000,0).chancedOutput(<gregtech:meta_item_2:24202>,400,0).EUt(16).duration(800).buildAndRegister();
-autoclave.findRecipe(24,[<appliedenergistics2:material:2>],[<liquid:water>*200]).remove();
-autoclave.findRecipe(24,[<appliedenergistics2:material:2>],[<liquid:distilled_water>*200]).remove();
 autoclave.recipeBuilder().inputs([<ore:dustCertusQuartz>]).fluidInputs([<liquid:water>*200]).outputs([<appliedenergistics2:material>]).EUt(24).duration(1500).buildAndRegister();
 autoclave.recipeBuilder().inputs([<ore:dustCertusQuartz>]).fluidInputs([<liquid:distilled_water>*200]).outputs([<appliedenergistics2:material>]).EUt(24).duration(1500).buildAndRegister();
-hammer.recipeBuilder().inputs([<gregtech:compressed_9:3>]).outputs(<appliedenergistics2:material>*9).EUt(24).duration(100).buildAndRegister();
-compressor.recipeBuilder().inputs([<appliedenergistics2:material>*9]).outputs([<gregtech:compressed_9:3>]).EUt(2).duration(400).buildAndRegister();
+hammer.recipeBuilder().inputs([<gregtech:meta_block_compressed_9:3>]).outputs(<appliedenergistics2:material>*9).EUt(24).duration(100).buildAndRegister();
+compressor.recipeBuilder().inputs([<appliedenergistics2:material>*9]).outputs([<gregtech:meta_block_compressed_9:3>]).EUt(2).duration(400).buildAndRegister();
 recipes.remove(<appliedenergistics2:fluix_block>);
 recipes.remove(<minecraft:quartz_block>);
 compressor.recipeBuilder().inputs([<appliedenergistics2:material:7>*4]).outputs([<appliedenergistics2:fluix_block>]).EUt(2).duration(400).buildAndRegister();
@@ -193,10 +185,10 @@ recipes.remove(<ore:blockTin>);
 recipes.remove(<ore:blockBronze>);
 recipes.remove(<ore:blockApatite>);
 recipes.remove(<forestry:apatite>);
-compressor.recipeBuilder().inputs([<ore:ingotTin>*9]).outputs([<gregtech:compressed_3:9>]).EUt(2).duration(400).buildAndRegister();
-compressor.recipeBuilder().inputs([<ore:ingotCopper>*9]).outputs([<gregtech:compressed_0:15>]).EUt(2).duration(400).buildAndRegister();
-compressor.recipeBuilder().inputs([<ore:ingotBronze>*9]).outputs([<gregtech:compressed_4:10>]).EUt(2).duration(400).buildAndRegister();
-compressor.recipeBuilder().inputs([<ore:gemApatite>*9]).outputs([<gregtech:compressed_10:5>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotTin>*9]).outputs([<gregtech:meta_block_compressed_3:9>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotCopper>*9]).outputs([<gregtech:meta_block_compressed_0:15>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotBronze>*9]).outputs([<gregtech:meta_block_compressed_4:10>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:gemApatite>*9]).outputs([<gregtech:meta_block_compressed_10:5>]).EUt(2).duration(400).buildAndRegister();
 
 //Flexible Casing
 assembler.recipeBuilder().inputs(<ore:plateBronze>*4,<ore:plateEmerald>*2,<forestry:impregnated_casing>).fluidInputs(<liquid:glass>*200).outputs(<forestry:flexible_casing>).EUt(30).duration(20).buildAndRegister();
@@ -212,6 +204,7 @@ bath.recipeBuilder().inputs([<minecraft:red_mushroom>]).fluidInputs([<liquid:mil
 reactor.recipeBuilder().notConsumable(<minecraft:mycelium>).fluidInputs([<liquid:water>*1000]).fluidOutputs([<liquid:witchwater>*1000]).EUt(4).duration(80).buildAndRegister();
 
 //Hopper replacement
+recipes.replaceAllOccurences(<minecraft:hopper>, <pneumaticcraft:omnidirectional_hopper>);
 assembler.findRecipe(2,[<gregtech:meta_item_1:12033>*5,<minecraft:chest>],[null]).remove();
 assembler.findRecipe(2,[<gregtech:meta_item_1:12197>*5,<minecraft:chest>],[null]).remove();
 assembler.findRecipe(2,[<gregtech:meta_item_1:12033>*5,<minecraft:trapped_chest>],[null]).remove();
@@ -222,6 +215,12 @@ macerator.findRecipe(8,[<minecraft:hopper>],[null]).remove();
 macerator.recipeBuilder().inputs([<pneumaticcraft:omnidirectional_hopper>]).outputs([<gregtech:meta_item_1:2033>*5,<gregtech:meta_item_1:2196>*8]).EUt(8).duration(150).buildAndRegister();
 fluid_extractor.findRecipe(32,[<minecraft:hopper>],[null]).remove();
 fluid_extractor.recipeBuilder().inputs([<pneumaticcraft:omnidirectional_hopper>]).fluidOutputs([<liquid:iron>*720]).EUt(32).duration(400).buildAndRegister();
+plasma_arc.findRecipe(32,[<minecraft:hopper>],[<liquid:plasma.argon>]).remove();
+plasma_arc.findRecipe(32,[<minecraft:hopper>],[<liquid:plasma.nitrogen>]).remove();
+plasma_arc.recipeBuilder().inputs([<pneumaticcraft:omnidirectional_hopper>]).fluidInputs([<liquid:plasma.argon>]).outputs([<gregtech:meta_item_1:10197>*5, <gregtech:meta_item_1:2089>*8]).fluidOutputs([<liquid:argon>]).EUt(10).duration(18).buildAndRegister();
+plasma_arc.recipeBuilder().inputs([<pneumaticcraft:omnidirectional_hopper>]).fluidInputs([<liquid:plasma.nitrogen>]).outputs([<gregtech:meta_item_1:10197>*5, <gregtech:meta_item_1:2089>*8]).fluidOutputs([<liquid:nitrogen>]).EUt(10).duration(18).buildAndRegister();
+arc.findRecipe(30, [<minecraft:hopper>], [<liquid:oxygen>*300]).remove();
+arc.recipeBuilder().inputs([<pneumaticcraft:omnidirectional_hopper>]).fluidInputs(<liquid:oxygen>*300).outputs([<gregtech:meta_item_1:10197>*5, <gregtech:meta_item_1:2089>*8]).EUt(30).duration(300).buildAndRegister();
 
 //Project Red
 assembler.recipeBuilder().inputs([<projectred-core:resource_item>]).fluidInputs([<liquid:redstone>*144]).outputs([<projectred-core:resource_item:1>]).EUt(16).duration(200).buildAndRegister();

@@ -7,7 +7,12 @@ recipes.remove(<minecraft:magma_cream>);
 
 //No exploits
 recipes.remove(<minecraft:dirt:1>);
-recipes.addShapeless(<minecraft:dirt:1>*3,[<ore:dirt>,<ore:dirt>,<ore:dirt>,<ore:gravel>]);
+recipes.addShapeless(<minecraft:dirt:1>*4,[<ore:dirt>,<ore:gravel>,<ore:dirt>,<ore:gravel>]);
+
+// Add dirt doubling recipe
+mods.exnihilocreatio.Sieve.addStringMeshRecipe(<minecraft:dirt:1>, <minecraft:dirt>, 1.0);
+mods.exnihilocreatio.Sieve.addStringMeshRecipe(<minecraft:dirt:1>, <minecraft:dirt>, 0.4);
+mods.exnihilocreatio.Sieve.addStringMeshRecipe(<minecraft:dirt:1>, <minecraft:gravel>, 0.4);
 
 //Glass
 furnace.remove(<minecraft:glass>);
