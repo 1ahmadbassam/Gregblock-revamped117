@@ -1,27 +1,17 @@
-# GregBlock Revamped
+# GregBlock Revamped (3.0)
+This is an in-progress attempt to modernize GregBlock Revamped to latest versions of GTCE & related mods, while fixing critical bugs and hopefully improving it a little bit.
+Currently, the modpack is playable, but mods added by GregBlock Revamped over original Gregblock are not properly integrated (most stuff  from AE2 Fluid Crafting, some AE2 stuff, most OpenComputers blocks, as well as some TConstruct things which come from addons). Most major bugs are fixed.
 
+Changes over GregBlock Revamped (Implemented/Planned): 
+- Updated all mods to their latest versions.
+- Updated custom Gregblock mods to full support for GTCE 1.17 (GregBlock Utils, GregicAdditions, GTCEBees, GregsConstruct)
+- Added performance optimization mods.
+- Add GTCE2OC (was a PR for GregBlock Revamped).
+- Update GTCE to custom 1.17.3, fixing issue with fisher negative ticks and with pipes losing content on world reload (PR to original GTCE which was never merged).
+- Update integration for most mods, including mods already integrated by TheLimePixel's original GregBlock efforts.
+- Taking inspiration from some later Gregtech Skyblock modpacks to (hopefully) add more content and enrich the experience.
 
-Welcome, GregBlock players, I am glad to announce the new version of GregBlock.
+Note: There are no plans currently to update to GTCEu latest, because it is signifcantly different from GTCE, and will probably require a rewrite of the modpack (not worth it). For starters, it already includes most stuff from Gregic Additions.
+Note 2: I plan to ask TheLimePixel to eventually merge these changes with GregBlock if he's willing to.
 
-If you have any questions, please create a ticket here: https://github.com/programgames/Gregblock-revamped/issues  
-I will fix them as fast as possible.
-
-
-Changelog:
-- Update most of mods
-- Add [Schematica](https://www.curseforge.com/minecraft/mc-mods/schematica)
-- Update GregTechCE to 1.11
-- Add [OpenComputers](https://www.curseforge.com/minecraft/mc-mods/opencomputers)
-- Add [AE2 Fluid Crafting](https://www.curseforge.com/minecraft/mc-mods/ae2-fluid-crafting)
-- Add charger from AE2 to charge wireless crafting terminal (fix of [GregBlock/#172](https://github.com/TheLimePixel/GregBlock/issues/172))
-- Fix multiple bugs
-- GregicAdditions, GregsConstruct, GTCEBees, GregBlockUtilities included in the mods folder are compatible with Gregtech 1.11
-- Fix lots of English typos ([#15](https://github.com/programgames/Gregblock-revamped/pull/15))
-- Fix Steam Pump Tooltips
-
-Installation: 
-- Open the zip file in your favorite launcher
-- Wait for mods downloading
-- (Temporary) Please verify that every mod included in the `mods` folder ( custom mods ) from the zip file is really included in your `.minecraft` folder; if not... add them manually.
-
-P.S. Old maps should be compatible, you're welcome! But please make a backup before.
+If you ever find a problem or bug, feel free to leave me an issue and I'll take a look at it.
