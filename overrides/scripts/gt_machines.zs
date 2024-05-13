@@ -62,6 +62,7 @@ recipes.remove(<appliedenergistics2:quartz_vibrant_glass>);
 alloy.recipeBuilder().inputs([<ore:dustGlowstone>*2,<appliedenergistics2:quartz_glass>]).outputs([<appliedenergistics2:quartz_vibrant_glass>]).duration(50).EUt(16).buildAndRegister();
 
 //Glass
+fluid_extractor.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidOutputs(<liquid:glass>*1000).EUt(32).duration(80).buildAndRegister();
 arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:oxygen>*480]).outputs([<minecraft:glass>]).EUt(30).duration(480).buildAndRegister();
 plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.argon>]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:argon>]).EUt(10).duration(30).buildAndRegister();
 plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.nitrogen>*2]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:nitrogen>*2]).EUt(10).duration(30).buildAndRegister();
@@ -376,7 +377,7 @@ mixer.recipeBuilder().inputs([<ore:ingotIron>,<projectred-core:resource_item:105
 mill.recipeBuilder().inputs([<projectred-core:resource_item:104>]).outputs([<contenttweaker:electrotine_wire>*2]).EUt(4).duration(100).buildAndRegister();
 recipes.remove(<projectred-transmission:wire:34>);
 packer.recipeBuilder().inputs([<contenttweaker:electrotine_wire>,<ore:plateRubber>]).outputs([<projectred-transmission:wire:34>]).EUt(8).duration(100).buildAndRegister();
-unpacker.recipeBuilder().inputs([<projectred-transmission:wire:34>]).property("circuit",8).outputs([<contenttweaker:electrotine_wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
+unpacker.recipeBuilder().inputs([<projectred-transmission:wire:34>, <gregtech:meta_item_1:32766>.withTag({Configuration: 1})]).outputs([<contenttweaker:electrotine_wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
 
 recipes.removeByRecipeName("projectred-transmission:insulated/white_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/orange_insulated_wire");
@@ -395,7 +396,7 @@ recipes.removeByRecipeName("projectred-transmission:insulated/green_insulated_wi
 recipes.removeByRecipeName("projectred-transmission:insulated/red_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/black_insulated_wire");
 packer.recipeBuilder().inputs([<projectred-transmission:wire>,<ore:plateRubber>]).outputs([<projectred-transmission:wire:16>]).EUt(8).duration(100).buildAndRegister();
-unpacker.recipeBuilder().inputs([<projectred-transmission:wire:16>]).property("circuit",8).outputs([<projectred-transmission:wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
+unpacker.recipeBuilder().inputs([<projectred-transmission:wire:16>, <gregtech:meta_item_1:32766>.withTag({Configuration: 1})]).outputs([<projectred-transmission:wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
 
 
 recipes.remove(<projectred-expansion:plan>);
