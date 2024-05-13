@@ -325,12 +325,12 @@ recipes.addShaped(<appliedenergistics2:fluid_interface>,[
 [<ore:plateSkySteel>,<ore:dyeBlue>,<ore:plateSkySteel>]
 ]);
 
-recipes.remove(<wct:magnet_card>);
-recipes.addShaped(<wct:magnet_card>,[
-[null,<ore:plateNeodymiumMagnetic>],
-[<ore:plateNeodymiumMagnetic>,<appliedenergistics2:material:28>,<ore:plateNeodymiumMagnetic>],
-[null,<ore:plateNeodymiumMagnetic>]
-]);
+// recipes.remove(<wct:magnet_card>);
+// recipes.addShaped(<wct:magnet_card>,[
+// [null,<ore:plateNeodymiumMagnetic>],
+// [<ore:plateNeodymiumMagnetic>,<appliedenergistics2:material:28>,<ore:plateNeodymiumMagnetic>],
+// [null,<ore:plateNeodymiumMagnetic>]
+// ]);
 
 recipes.remove(<appliedenergistics2:condenser>);
 recipes.addShaped(<appliedenergistics2:condenser>,[
@@ -775,6 +775,20 @@ mods.jei.JEI.removeAndHide(<nuclearcraft:turbine_dynamo_coil:*>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:heat_exchanger_condenser_tube_copper>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:heat_exchanger_condenser_tube_hard_carbon>);
 mods.jei.JEI.removeAndHide(<nuclearcraft:heat_exchanger_condenser_tube_thermoconducting>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:0>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:1>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:3>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:4>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:5>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:7>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:8>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:9>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:10>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:11>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:12>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:13>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:14>);
+mods.jei.JEI.removeAndHide(<nuclearcraft:alloy:15>);
 
 
 mods.jei.JEI.hideCategory("nuclearcraft_active_cooler");
@@ -1754,6 +1768,9 @@ mods.jei.JEI.removeAndHide(<forestry:still>);
 mods.jei.JEI.removeAndHide(<forestry:gear_bronze>);
 mods.jei.JEI.removeAndHide(<forestry:gear_copper>);
 mods.jei.JEI.removeAndHide(<forestry:gear_tin>);
+mods.jei.JEI.removeAndHide(<forestry:ingot_bronze>);
+mods.jei.JEI.removeAndHide(<forestry:ingot_copper>);
+mods.jei.JEI.removeAndHide(<forestry:ingot_tin>);
 mods.jei.JEI.removeAndHide(<forestry:scoop>);
 mods.jei.JEI.removeAndHide(<extratrees:machine>);
 mods.jei.JEI.removeAndHide(<forestry:wrench>);
@@ -1917,6 +1934,10 @@ recipes.addShaped(<packagedauto:encoder>,[
 
 //ProjectRed
 //Misc Removal
+furnace.remove(<projectred-core:resource_item:251>);
+mods.jei.JEI.removeAndHide(<projectred-core:resource_item:100>);
+mods.jei.JEI.removeAndHide(<projectred-core:resource_item:101>);
+mods.jei.JEI.removeAndHide(<projectred-core:resource_item:102>);
 mods.jei.JEI.removeAndHide(<projectred-core:resource_item:103>);
 mods.jei.JEI.removeAndHide(<projectred-core:resource_item:251>);
 mods.jei.JEI.removeAndHide(<projectred-core:resource_item:410>);

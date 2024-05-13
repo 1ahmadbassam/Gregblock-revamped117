@@ -30,6 +30,7 @@ val plasma_arc = RecipeMap.getByName("plasma_arc_furnace");
 val bath = RecipeMap.getByName("chemical_bath");
 val mill = RecipeMap.getByName("wiremill");
 val centrifuge = RecipeMap.getByName("centrifuge");
+val extruder = RecipeMap.getByName("extruder");
 
 //Ex Nihilo
 hammer.findRecipe(8,[<minecraft:cobblestone>],[null]).remove();
@@ -205,16 +206,71 @@ assembler.recipeBuilder().inputs([<ore:plateGlass>*4,<ore:plateTough>*4]).output
 
 assembler.recipeBuilder().inputs([<ore:plateIronCompressed>*8]).outputs([<pneumaticcraft:pressure_chamber_wall>*4]).property("circuit",8).duration(50).EUt(16).buildAndRegister();
 
-//Fix Compressor recipes for Blocks
+//Fix block recipes
+recipes.remove(<minecraft:hay_block>);
 recipes.remove(<ore:blockCopper>);
+recipes.remove(<ore:blockBronze>);
+recipes.remove(<ore:blockSteel>);
+recipes.remove(<ore:blockCobalt>);
+recipes.remove(<ore:blockIronCompressed>);
 recipes.remove(<ore:blockTin>);
+recipes.remove(<ore:blockAsh>);
+recipes.remove(<ore:blockSilver>);
 recipes.remove(<ore:blockBronze>);
 recipes.remove(<ore:blockApatite>);
+recipes.remove(<ore:blockManganese>);
+recipes.remove(<ore:blockBeryllium>);
+recipes.remove(<ore:blockPlutonium241>);
+recipes.remove(<ore:blockUranium235>);
+recipes.remove(<ore:blockSulfur>);
+recipes.remove(<ore:blockRedAlloy>);
+recipes.remove(<ore:blockCharcoal>);
+recipes.remove(<ore:blockGraphite>);
+recipes.remove(<ore:blockLead>);
+recipes.remove(<ore:blockTough>);
+recipes.remove(<ore:blockThorium>);
+recipes.remove(<ore:blockUranium>);
+recipes.remove(<ore:blockLithium>);
+recipes.remove(<ore:blockMagnesium>);
+recipes.remove(<ore:blockBoron>);
 recipes.remove(<forestry:apatite>);
-compressor.recipeBuilder().inputs([<ore:ingotTin>*9]).outputs([<gregtech:meta_block_compressed_3:9>]).EUt(2).duration(400).buildAndRegister();
-compressor.recipeBuilder().inputs([<ore:ingotCopper>*9]).outputs([<gregtech:meta_block_compressed_0:15>]).EUt(2).duration(400).buildAndRegister();
-compressor.recipeBuilder().inputs([<ore:ingotBronze>*9]).outputs([<gregtech:meta_block_compressed_4:10>]).EUt(2).duration(400).buildAndRegister();
-compressor.recipeBuilder().inputs([<ore:gemApatite>*9]).outputs([<gregtech:meta_block_compressed_10:5>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotTin>*9]).outputs([<gregtech:meta_block_compressed_4:7>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotCopper>*9]).outputs([<gregtech:meta_block_compressed_1:2>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotBronze>*9]).outputs([<gregtech:meta_block_compressed_5:15>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotSteel>*9]).outputs([<gregtech:meta_block_compressed_11:8>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotCobalt>*9]).outputs([<gregtech:meta_block_compressed_1:1>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotIronCompressed>*9]).outputs([<gregtech:meta_block_compressed_43:12>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotRedAlloy>*9]).outputs([<gregtech:meta_block_compressed_14:13>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotSilver>*9]).outputs([<gregtech:meta_block_compressed_3:14>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotManganese>*9]).outputs([<gregtech:meta_block_compressed_2:7>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotPlutonium241>*9]).outputs([<gregtech:meta_block_compressed_3:5>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotBeryllium>*9]).outputs([<gregtech:meta_block_compressed_0:7>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotGraphite>*9]).outputs([<gregtech:meta_block_compressed_12:12>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotUranium235>*9]).outputs([<gregtech:meta_block_compressed_4:12>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotTough>*9]).outputs([<gregtech:meta_block_compressed_43:13>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotLead>*9]).outputs([<gregtech:meta_block_compressed_2:3>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotBoron>*9]).outputs([<gregtech:meta_block_compressed_0:9>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotThorium>*9]).outputs([<gregtech:meta_block_compressed_4:5>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotUranium>*9]).outputs([<gregtech:meta_block_compressed_4:11>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotLithium>*9]).outputs([<gregtech:meta_block_compressed_2:4>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:ingotMagnesium>*9]).outputs([<gregtech:meta_block_compressed_2:6>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:dustAsh>*9]).outputs([<gregtech:meta_block_compressed_5:9>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:dustSulfur>*9]).outputs([<gregtech:meta_block_compressed_4:1>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:charcoal>*9]).outputs([<gregtech:meta_block_compressed_6:5>]).EUt(2).duration(400).buildAndRegister();
+compressor.recipeBuilder().inputs([<ore:gemApatite>*9]).outputs([<gregtech:meta_block_compressed_14:2>]).EUt(2).duration(400).buildAndRegister();
+
+solidifier.findRecipe(8,[<gregtech:meta_item_1:32308>],[<liquid:iron>*1296]).remove();
+solidifier.findRecipe(8,[<gregtech:meta_item_1:32308>],[<liquid:gold>*1296]).remove();
+solidifier.recipeBuilder().fluidInputs([<liquid:iron>*1296]).notConsumable(<gregtech:meta_item_1:32308>).outputs([<minecraft:iron_block>]).EUt(8).duration(56).buildAndRegister();
+solidifier.recipeBuilder().fluidInputs([<liquid:gold>*1296]).notConsumable(<gregtech:meta_item_1:32308>).outputs([<minecraft:gold_block>]).EUt(8).duration(56).buildAndRegister();
+alloy.findRecipe(32,[<minecraft:iron_ingot>*9,<gregtech:meta_item_1:32308>],[null]).remove();
+alloy.findRecipe(32,[<minecraft:gold_ingot>*9,<gregtech:meta_item_1:32308>],[null]).remove();
+alloy.recipeBuilder().inputs([<ore:ingotIron>*9]).notConsumable(<gregtech:meta_item_1:32308>).outputs([<minecraft:iron_block>]).EUt(32).duration(5).buildAndRegister();
+alloy.recipeBuilder().inputs([<ore:ingotGold>*9]).notConsumable(<gregtech:meta_item_1:32308>).outputs([<minecraft:gold_block>]).EUt(32).duration(5).buildAndRegister();
+extruder.findRecipe(64,[<minecraft:iron_ingot>*9,<gregtech:meta_item_1:32363>],[null]).remove();
+extruder.findRecipe(64,[<minecraft:gold_ingot>*9,<gregtech:meta_item_1:32363>],[null]).remove();
+extruder.recipeBuilder().inputs([<ore:ingotIron>*9]).notConsumable(<gregtech:meta_item_1:32363>).outputs([<minecraft:iron_block>]).EUt(64).duration(10).buildAndRegister();
+extruder.recipeBuilder().inputs([<ore:ingotGold>*9]).notConsumable(<gregtech:meta_item_1:32363>).outputs([<minecraft:gold_block>]).EUt(64).duration(10).buildAndRegister();
 
 //Flexible Casing
 assembler.recipeBuilder().inputs(<ore:plateBronze>*4,<ore:plateEmerald>*2,<forestry:impregnated_casing>).fluidInputs(<liquid:glass>*200).outputs(<forestry:flexible_casing>).EUt(30).duration(20).buildAndRegister();
@@ -320,7 +376,7 @@ mixer.recipeBuilder().inputs([<ore:ingotIron>,<projectred-core:resource_item:105
 mill.recipeBuilder().inputs([<projectred-core:resource_item:104>]).outputs([<contenttweaker:electrotine_wire>*2]).EUt(4).duration(100).buildAndRegister();
 recipes.remove(<projectred-transmission:wire:34>);
 packer.recipeBuilder().inputs([<contenttweaker:electrotine_wire>,<ore:plateRubber>]).outputs([<projectred-transmission:wire:34>]).EUt(8).duration(100).buildAndRegister();
-unpacker.recipeBuilder().inputs([<projectred-transmission:wire:34>]).outputs([<contenttweaker:electrotine_wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
+unpacker.recipeBuilder().inputs([<projectred-transmission:wire:34>]).property("circuit",8).outputs([<contenttweaker:electrotine_wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
 
 recipes.removeByRecipeName("projectred-transmission:insulated/white_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/orange_insulated_wire");
@@ -339,7 +395,7 @@ recipes.removeByRecipeName("projectred-transmission:insulated/green_insulated_wi
 recipes.removeByRecipeName("projectred-transmission:insulated/red_insulated_wire");
 recipes.removeByRecipeName("projectred-transmission:insulated/black_insulated_wire");
 packer.recipeBuilder().inputs([<projectred-transmission:wire>,<ore:plateRubber>]).outputs([<projectred-transmission:wire:16>]).EUt(8).duration(100).buildAndRegister();
-unpacker.recipeBuilder().inputs([<projectred-transmission:wire:16>]).outputs([<projectred-transmission:wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
+unpacker.recipeBuilder().inputs([<projectred-transmission:wire:16>]).property("circuit",8).outputs([<projectred-transmission:wire>,<gregtech:meta_item_1:12152>]).EUt(8).duration(100).buildAndRegister();
 
 
 recipes.remove(<projectred-expansion:plan>);

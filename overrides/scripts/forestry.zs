@@ -68,3 +68,16 @@ mods.forestry.Carpenter.addRecipe(<forestry:chipsets:3>, [
 
 mods.forestry.Carpenter.removeRecipe(<forestry:kit_shovel>);
 mods.forestry.Carpenter.removeRecipe(<forestry:kit_pickaxe>);
+
+mods.forestry.Carpenter.removeRecipe(<forestry:crated.forestry.apatite.0>);
+mods.forestry.Carpenter.addRecipe(<forestry:crated.forestry.apatite.0>,[
+[<ore:gemApatite>, <ore:gemApatite>, <ore:gemApatite>],
+[<ore:gemApatite>, <ore:gemApatite>, <ore:gemApatite>],
+[<ore:gemApatite>, <ore:gemApatite>, <ore:gemApatite>]],
+25, <liquid:water>*100, <forestry:crate>);
+mods.forestry.Carpenter.removeRecipe(<forestry:apatite>);
+mods.forestry.Carpenter.addRecipe(<gregtech:meta_item_1:8226>*9,[
+[null, null, null],
+[null, <forestry:crated.forestry.apatite.0>, null],
+[null, null, null]],
+25);
