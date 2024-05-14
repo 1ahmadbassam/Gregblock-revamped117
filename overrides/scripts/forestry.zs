@@ -69,6 +69,7 @@ mods.forestry.Carpenter.addRecipe(<forestry:chipsets:3>, [
 mods.forestry.Carpenter.removeRecipe(<forestry:kit_shovel>);
 mods.forestry.Carpenter.removeRecipe(<forestry:kit_pickaxe>);
 
+// Fix crated items
 mods.forestry.Carpenter.removeRecipe(<forestry:crated.forestry.apatite.0>);
 mods.forestry.Carpenter.addRecipe(<forestry:crated.forestry.apatite.0>,[
 [<ore:gemApatite>, <ore:gemApatite>, <ore:gemApatite>],
@@ -81,3 +82,56 @@ mods.forestry.Carpenter.addRecipe(<gregtech:meta_item_1:8226>*9,[
 [null, <forestry:crated.forestry.apatite.0>, null],
 [null, null, null]],
 25);
+
+mods.forestry.Carpenter.removeRecipe(<forestry:crated.forestry.ash.0>);
+mods.forestry.Carpenter.addRecipe(<forestry:crated.forestry.ash.0>,[
+[<ore:dustAsh>, <ore:dustAsh>, <ore:dustAsh>],
+[<ore:dustAsh>, <ore:dustAsh>, <ore:dustAsh>],
+[<ore:dustAsh>, <ore:dustAsh>, <ore:dustAsh>]],
+25, <liquid:water>*100, <forestry:crate>);
+mods.forestry.Carpenter.removeRecipe(<forestry:ash>);
+mods.forestry.Carpenter.addRecipe(<gregtech:meta_item_1:2089>*9,[
+[null, null, null],
+[null, <forestry:crated.forestry.ash.0>, null],
+[null, null, null]],
+25);
+
+mods.forestry.Carpenter.removeRecipe(<forestry:crated.ingottin>);
+mods.forestry.Carpenter.addRecipe(<forestry:crated.ingottin>,[
+[<ore:ingotTin>, <ore:ingotTin>, <ore:ingotTin>],
+[<ore:ingotTin>, <ore:ingotTin>, <ore:ingotTin>],
+[<ore:ingotTin>, <ore:ingotTin>, <ore:ingotTin>]],
+25, <liquid:water>*100, <forestry:crate>);
+mods.forestry.Carpenter.removeRecipe(<forestry:ingot_tin>);
+mods.forestry.Carpenter.addRecipe(<gregtech:meta_item_1:10071>*9,[
+[null, null, null],
+[null, <forestry:crated.ingottin>, null],
+[null, null, null]],
+25);
+
+mods.forestry.Carpenter.removeRecipe(<forestry:crated.ingotcopper>);
+mods.forestry.Carpenter.addRecipe(<forestry:crated.ingotcopper>,[
+[<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>],
+[<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>],
+[<ore:ingotCopper>, <ore:ingotCopper>, <ore:ingotCopper>]],
+25, <liquid:water>*100, <forestry:crate>);
+mods.forestry.Carpenter.removeRecipe(<forestry:ingot_copper>);
+mods.forestry.Carpenter.addRecipe(<gregtech:meta_item_1:10018>*9,[
+[null, null, null],
+[null, <forestry:crated.ingotcopper>, null],
+[null, null, null]],
+25);
+
+mods.forestry.Carpenter.removeRecipe(<forestry:crated.ingotbronze>);
+mods.forestry.Carpenter.addRecipe(<forestry:crated.ingotbronze>,[
+[<ore:ingotBronze>, <ore:ingotBronze>, <ore:ingotBronze>],
+[<ore:ingotBronze>, <ore:ingotBronze>, <ore:ingotBronze>],
+[<ore:ingotBronze>, <ore:ingotBronze>, <ore:ingotBronze>]],
+25, <liquid:water>*100, <forestry:crate>);
+mods.forestry.Carpenter.removeRecipe(<forestry:ingot_bronze>);
+mods.forestry.Carpenter.addRecipe(<gregtech:meta_item_1:10095>*9,[
+[null, null, null],
+[null, <forestry:crated.ingotbronze>, null],
+[null, null, null]],
+25);
+

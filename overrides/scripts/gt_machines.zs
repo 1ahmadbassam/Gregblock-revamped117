@@ -31,6 +31,7 @@ val bath = RecipeMap.getByName("chemical_bath");
 val mill = RecipeMap.getByName("wiremill");
 val centrifuge = RecipeMap.getByName("centrifuge");
 val extruder = RecipeMap.getByName("extruder");
+val bender = RecipeMap.getByName("metal_bender");
 
 //Ex Nihilo
 hammer.findRecipe(8,[<minecraft:cobblestone>],[null]).remove();
@@ -66,6 +67,15 @@ fluid_extractor.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidOutputs(
 arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:oxygen>*480]).outputs([<minecraft:glass>]).EUt(30).duration(480).buildAndRegister();
 plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.argon>]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:argon>]).EUt(10).duration(30).buildAndRegister();
 plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.nitrogen>*2]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:nitrogen>*2]).EUt(10).duration(30).buildAndRegister();
+
+//Anvil
+recipes.remove(<minecraft:anvil>);
+alloy.findRecipe(64,[<minecraft:iron_ingot>*31,<gregtech:meta_item_1:32314>],[null]).remove();
+alloy.findRecipe(64,[<gregtech:meta_item_1:10197>*31,<gregtech:meta_item_1:32314>],[null]).remove();
+alloy.recipeBuilder().inputs(<minecraft:iron_ingot>*31,<gregtech:meta_item_1:32314>).outputs([<minecraft:anvil>]).EUt(32).duration(18000).buildAndRegister();
+alloy.recipeBuilder().inputs(<gregtech:meta_item_1:10197>*31,<gregtech:meta_item_1:32314>).outputs([<minecraft:anvil>]).EUt(32).duration(9000).buildAndRegister();
+alloy.recipeBuilder().inputs(<minecraft:iron_ingot>*31,<ore:blockIron>).outputs([<minecraft:anvil>]).EUt(32).duration(30000).buildAndRegister();
+alloy.recipeBuilder().inputs(<gregtech:meta_item_1:10197>*31,<ore:blockIron>).outputs([<minecraft:anvil>]).EUt(32).duration(15000).buildAndRegister();
 
 //NuclearCraft Stuff
 recipes.remove(<nuclearcraft:reactor_casing_transparent>);
@@ -183,11 +193,21 @@ implosion.recipeBuilder().inputs([<ore:blockIron>]).outputs(<pneumaticcraft:comp
 forming.findRecipe(16,[<gregtech:meta_item_1:12094>,<gregtech:meta_item_1:32304>],[null]).remove();
 forming.findRecipe(16,[<gregtech:meta_item_1:12109>,<gregtech:meta_item_1:32304>],[null]).remove();
 
-//Forestry Automation
+//Forestry
 fluid_extractor.recipeBuilder().inputs([<forestry:crafting_material:5>]).fluidOutputs([<liquid:ice>]).EUt(128).duration(128).buildAndRegister();
 assembler.recipeBuilder().inputs([<ore:plateBrass>*8]).outputs([<forestry:sturdy_machine>]).property("circuit",8).duration(50).EUt(16).buildAndRegister();
 assembler.recipeBuilder().inputs([<forestry:sturdy_machine>,<ore:plateTin>*4,<ore:plateWroughtIron>*4]).outputs([<genetics:misc>]).duration(50).EUt(16).buildAndRegister();
 assembler.recipeBuilder().inputs([<genetics:misc>,<ore:plateDiamond>*8]).fluidInputs([<liquid:water>*5000]).outputs([<forestry:hardened_machine>]).duration(50).EUt(64).buildAndRegister();
+
+recipes.remove(<forestry:can>);
+<forestry:can>.addTooltip("One-time use only cells. Good for automation.");
+bender.recipeBuilder().inputs([<ore:plateTin>*2]).property("circuit",12).outputs([<forestry:can>]).EUt(30).duration(200).buildAndRegister();
+extruder.recipeBuilder().inputs([<ore:plateTin>*2,<gregtech:meta_item_1:32354>]).outputs([<forestry:can>]).EUt(30).duration(200).buildAndRegister();
+recipes.remove(<forestry:capsule>);
+recipes.remove(<forestry:refractory>);
+compressor.recipeBuilder().inputs([<ore:itemBeeswax>*3]).outputs(<forestry:capsule>).EUt(16).duration(280).buildAndRegister();
+compressor.recipeBuilder().inputs([<forestry:refractory_wax>*3]).outputs(<forestry:refractory>).EUt(16).duration(280).buildAndRegister();
+
 
 //AE2 Skyblockification
 mods.appliedenergistics2.Inscriber.removeRecipe(<appliedenergistics2:material:13>);

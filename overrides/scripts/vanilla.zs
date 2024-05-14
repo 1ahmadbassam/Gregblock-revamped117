@@ -1791,12 +1791,22 @@ mods.jei.JEI.hideCategory("forestry.squeezer");
 mods.jei.JEI.hideCategory("forestry.still");
 mods.jei.JEI.hideCategory("binnie.extratrees.lumbermill");
 
+mods.jei.JEI.removeAndHide(<forestry:apatite>);
+mods.jei.JEI.removeAndHide(<forestry:crafting_material:0>);
 
 //GregTech
 //No Rubber Trees in This Pack
 mods.jei.JEI.hide(<gregtech:sapling>);
 mods.jei.JEI.hide(<gregtech:log>);
 mods.jei.JEI.hide(<gregtech:leaves>);
+
+<ore:anyQuantumChest>.add(<gregtech:machine:2234>);
+<ore:anyQuantumChest>.add(<gregtech:machine:2235>);
+<ore:anyQuantumChest>.add(<gregtech:machine:2236>);
+
+<ore:anyQuantumTank>.add(<gregtech:machine:2237>);
+<ore:anyQuantumTank>.add(<gregtech:machine:2238>);
+<ore:anyQuantumChest>.add(<gregtech:machine:2239>);
 
 //TOP
 //Remove pointless Probe Stuff
