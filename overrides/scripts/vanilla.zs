@@ -1806,7 +1806,7 @@ mods.jei.JEI.hide(<gregtech:leaves>);
 
 <ore:anyQuantumTank>.add(<gregtech:machine:2237>);
 <ore:anyQuantumTank>.add(<gregtech:machine:2238>);
-<ore:anyQuantumChest>.add(<gregtech:machine:2239>);
+<ore:anyQuantumTank>.add(<gregtech:machine:2239>);
 
 //TOP
 //Remove pointless Probe Stuff
