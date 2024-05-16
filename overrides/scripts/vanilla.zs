@@ -1,3 +1,15 @@
+import crafttweaker.item.IItemStack as IItemStack;
+import crafttweaker.oredict.IOreDictEntry as IOreDictEntry;
+ 
+function pow(x as int, n as int) as int {
+	var result = 1;
+    if (n == 0) return 1;
+	for i in 1 to (n+1) {
+		result = result * x;
+	}
+	return result;
+}
+
 //Vanilla
 //Only in the chemical reactor
 recipes.removeByRecipeName("minecraft:ender_eye");
@@ -28,6 +40,16 @@ recipes.addShaped(<minecraft:shears>,[
 [<gregtech:meta_tool:6>,<ore:plateIron>],
 [<ore:plateIron>,<gregtech:meta_tool:9>]
 ]);
+
+//Piston
+recipes.remove(<minecraft:piston>);
+for tier, gear_type in ([<ore:gearSmallIron>, <ore:gearSmallSteel>, <ore:gearSmallAluminium>, <ore:gearSmallStainlessSteel>, <ore:gearSmallTitanium>, <ore:gearSmallTungstenSteel>] as IOreDictEntry[]){
+	recipes.addShaped(<minecraft:piston>*(pow(2, tier)), [
+		[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
+		[<ore:stoneSmooth>, gear_type, <ore:stoneSmooth>],
+		[<gregtech:meta_tool:6>, <ore:dustRedstone>, <gregtech:meta_tool:8>]
+	]);
+}
 
 //Remove vanilla tools
 mods.jei.JEI.removeAndHide(<minecraft:wooden_sword>);
@@ -1800,13 +1822,15 @@ mods.jei.JEI.hide(<gregtech:sapling>);
 mods.jei.JEI.hide(<gregtech:log>);
 mods.jei.JEI.hide(<gregtech:leaves>);
 
-<ore:anyQuantumChest>.add(<gregtech:machine:2234>);
-<ore:anyQuantumChest>.add(<gregtech:machine:2235>);
-<ore:anyQuantumChest>.add(<gregtech:machine:2236>);
+// No Magic absorber
+recipes.remove(<gregtech:machine:493>);
+mods.jei.JEI.removeAndHide(<gregtech:machine:493>);
 
-<ore:anyQuantumTank>.add(<gregtech:machine:2237>);
-<ore:anyQuantumTank>.add(<gregtech:machine:2238>);
-<ore:anyQuantumTank>.add(<gregtech:machine:2239>);
+// No Amplifabricators
+for amplifabricator in ([<gregtech:machine:80>, <gregtech:machine:81>, <gregtech:machine:82>, <gregtech:machine:83>] as IItemStack[]) {
+    recipes.remove(amplifabricator);
+    mods.jei.JEI.removeAndHide(amplifabricator);
+}
 
 //TOP
 //Remove pointless Probe Stuff

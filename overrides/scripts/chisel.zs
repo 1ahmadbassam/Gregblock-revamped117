@@ -1,4 +1,4 @@
-//Add Granite Chiseling
+//Granite Chiseling
 mods.chisel.Carving.addGroup("red_granite");
 mods.chisel.Carving.addGroup("black_granite");
 mods.chisel.Carving.addVariation("red_granite", <gregtech:granite:1>);

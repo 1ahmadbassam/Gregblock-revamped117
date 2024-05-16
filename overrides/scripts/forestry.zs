@@ -1,4 +1,4 @@
-//Carpenter Recipes
+//Carpenter
 mods.forestry.Carpenter.removeRecipe(<forestry:hardened_machine>);
 mods.forestry.Carpenter.addRecipe(<forestry:hardened_machine>, [
 [<ore:plateDiamond>,<ore:plateDiamond>,<ore:plateDiamond>],
@@ -69,7 +69,7 @@ mods.forestry.Carpenter.addRecipe(<forestry:chipsets:3>, [
 mods.forestry.Carpenter.removeRecipe(<forestry:kit_shovel>);
 mods.forestry.Carpenter.removeRecipe(<forestry:kit_pickaxe>);
 
-// Fix crated items
+//Carpenter - Crated Items
 mods.forestry.Carpenter.removeRecipe(<forestry:crated.forestry.apatite.0>);
 mods.forestry.Carpenter.addRecipe(<forestry:crated.forestry.apatite.0>,[
 [<ore:gemApatite>, <ore:gemApatite>, <ore:gemApatite>],

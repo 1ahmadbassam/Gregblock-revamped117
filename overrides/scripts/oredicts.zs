@@ -1,7 +1,7 @@
-//For Recipes
+//Coke
 <ore:fuelCoke>.addAll(<ore:gemCoke>);
 
-//For quests
+//Quest 'any' 
 <ore:anyInputHatch>.add(<gregtech:machine:702>);
 <ore:anyInputHatch>.add(<gregtech:machine:712>);
 <ore:anyInputHatch>.add(<gregtech:machine:722>);
@@ -107,12 +107,18 @@
 <ore:anyQuantumTank>.add(<gregtech:machine:1021>);
 <ore:anyQuantumTank>.add(<gregtech:machine:1022>);
 <ore:anyQuantumTank>.add(<gregtech:machine:1023>);
+<ore:anyQuantumTank>.add(<gregtech:machine:2237>);
+<ore:anyQuantumTank>.add(<gregtech:machine:2238>);
+<ore:anyQuantumTank>.add(<gregtech:machine:2239>);
 <ore:anyQuantumChest>.add(<gregtech:machine:1010>);
 <ore:anyQuantumChest>.add(<gregtech:machine:1011>);
 <ore:anyQuantumChest>.add(<gregtech:machine:1012>);
 <ore:anyQuantumChest>.add(<gregtech:machine:1013>);
+<ore:anyQuantumChest>.add(<gregtech:machine:2234>);
+<ore:anyQuantumChest>.add(<gregtech:machine:2235>);
+<ore:anyQuantumChest>.add(<gregtech:machine:2236>);
 
-//OreDict The GT Stone3
+//GregTech Stone
 <ore:stoneMarble>.add(<gregtech:mineral>);
 <ore:stoneMarble>.add(<gregtech:mineral:1>);
 <ore:stoneMarble>.add(<gregtech:mineral:5>);
@@ -130,7 +136,7 @@
 <ore:stoneBasalt>.add(<gregtech:mineral:7>);
 <ore:stoneBasalt>.add(<gregtech:mineral:14>);
 
-//Fix exploity concrete
+//Exploitable Concrete
 <ore:blockConcrete>.remove(<chisel:concrete_black>);
 <ore:blockConcrete>.remove(<chisel:concrete_red>);
 <ore:blockConcrete>.remove(<chisel:concrete_green>);

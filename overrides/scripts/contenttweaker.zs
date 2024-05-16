@@ -12,6 +12,8 @@ var uncompressed_charcoal = VanillaFactory.createItem("uncompressed_charcoal");
 var uncompressed_coal_coke = VanillaFactory.createItem("uncompressed_coal_coke");
 var uncompressed_lignite_coal = VanillaFactory.createItem("uncompressed_lignite_coal");
 var uncompressed_lignite_coke = VanillaFactory.createItem("uncompressed_lignite_coke");
+
+//Electrotine Wire
 var electrotine_wire = VanillaFactory.createItem("electrotine_wire");
 
 uncompressed_charcoal.register();
