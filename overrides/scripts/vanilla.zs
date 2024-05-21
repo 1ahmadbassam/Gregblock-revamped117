@@ -1,22 +1,7 @@
 import crafttweaker.item.IItemStack as IItemStack;
 import crafttweaker.oredict.IOreDictEntry as IOreDictEntry;
- 
-function pow(x as int, n as int) as int {
-	var result = 1;
-    if (n == 0) return 1;
-	for i in 1 to (n+1) {
-		result = result * x;
-	}
-	return result;
-}
 
 //Vanilla
-//Only in the chemical reactor
-recipes.removeByRecipeName("minecraft:ender_eye");
-recipes.remove(<minecraft:golden_apple>);
-recipes.remove(<minecraft:golden_carrot>);
-recipes.remove(<minecraft:magma_cream>);
-
 //No exploits
 recipes.remove(<minecraft:dirt:1>);
 recipes.addShapeless(<minecraft:dirt:1>*4,[<ore:dirt>,<ore:gravel>,<ore:dirt>,<ore:gravel>]);
@@ -33,23 +18,6 @@ recipes.addShaped(<gregtech:meta_item_1:2220>, [
 [<ore:gemFlint>],
 [<gregtech:meta_tool:12>]
 ]);
-
-//Shears
-recipes.remove(<minecraft:shears>);
-recipes.addShaped(<minecraft:shears>,[
-[<gregtech:meta_tool:6>,<ore:plateIron>],
-[<ore:plateIron>,<gregtech:meta_tool:9>]
-]);
-
-//Piston
-recipes.remove(<minecraft:piston>);
-for tier, gear_type in ([<ore:gearSmallIron>, <ore:gearSmallSteel>, <ore:gearSmallAluminium>, <ore:gearSmallStainlessSteel>, <ore:gearSmallTitanium>, <ore:gearSmallTungstenSteel>] as IOreDictEntry[]){
-	recipes.addShaped(<minecraft:piston>*(pow(2, tier)), [
-		[<ore:plankWood>, <ore:plankWood>, <ore:plankWood>],
-		[<ore:stoneSmooth>, gear_type, <ore:stoneSmooth>],
-		[<gregtech:meta_tool:6>, <ore:dustRedstone>, <gregtech:meta_tool:8>]
-	]);
-}
 
 //Remove vanilla tools
 mods.jei.JEI.removeAndHide(<minecraft:wooden_sword>);
@@ -77,9 +45,6 @@ mods.jei.JEI.removeAndHide(<minecraft:diamond_sword>);
 mods.jei.JEI.removeAndHide(<minecraft:diamond_axe>);
 mods.jei.JEI.removeAndHide(<minecraft:diamond_hoe>);
 mods.jei.JEI.removeAndHide(<minecraft:diamond_shovel>);
-
-//You can't cut glass with your bare hands
-recipes.remove(<minecraft:glass_pane:*>);
 
 //ProjectRed-ifying Vanilla
 mods.jei.JEI.removeAndHide(<minecraft:repeater>);
@@ -504,25 +469,6 @@ mods.jei.JEI.hide(<extracells:storage.component:5>);
 mods.jei.JEI.hide(<extracells:storage.component:6>);
 mods.jei.JEI.hide(<extracells:storage.component:7>);
 mods.jei.JEI.hide(<extracells:ecbaseblock>);
-
-//Smple Cobble Gen
-//Remove the GTCE Coke Oven
-mods.jei.JEI.removeAndHide(<gregtech:machine:526>);
-mods.jei.JEI.removeAndHide(<gregtech:machine:527>);
-mods.jei.JEI.removeAndHide(<gregtech:metal_casing:8>);
-
-mods.jei.JEI.hideCategory("gregtech:coke_oven");
-
-//Ceramics
-//Porcelain
-furnace.remove(<ceramics:unfired_clay:5>);
-furnace.addRecipe(<ceramics:unfired_clay:5>,<contenttweaker:unfired_porcelain_brick>);
-recipes.addShapeless(<contenttweaker:unfired_porcelain_brick>,[<ore:clayPorcelain>,<gregtech:meta_item_2:32012>]);
-recipes.addShaped(<contenttweaker:unfired_porcelain_brick>*8,[
-[<ore:clayPorcelain>,<ore:clayPorcelain>,<ore:clayPorcelain>],
-[<ore:clayPorcelain>,<gregtech:meta_item_2:32012>,<ore:clayPorcelain>],
-[<ore:clayPorcelain>,<ore:clayPorcelain>,<ore:clayPorcelain>]
-]);
 
 //NuclearCraft
 //Recipe Changes
