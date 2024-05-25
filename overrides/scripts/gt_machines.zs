@@ -54,12 +54,6 @@ hammer.recipeBuilder().inputs([<exnihilocreatio:block_granite_crushed>]).outputs
 
 lathe.recipeBuilder().inputs([<ore:stoneSmooth>]).outputs([<exnihilocreatio:item_material:6>,<gregtech:meta_item_1:1328>*2]).duration(500).EUt(16).buildAndRegister();
 
-//Glass
-fluid_extractor.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidOutputs(<liquid:glass>*1000).EUt(32).duration(80).buildAndRegister();
-arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:oxygen>*480]).outputs([<minecraft:glass>]).EUt(30).duration(480).buildAndRegister();
-plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.argon>]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:argon>]).EUt(10).duration(30).buildAndRegister();
-plasma_arc.recipeBuilder().inputs([<tconstruct:clear_glass>]).fluidInputs([<liquid:plasma.nitrogen>*2]).outputs([<minecraft:glass>]).fluidOutputs([<liquid:nitrogen>*2]).EUt(10).duration(30).buildAndRegister();
-
 //Anvil
 recipes.remove(<minecraft:anvil>);
 alloy.findRecipe(64,[<minecraft:iron_ingot>*31,<gregtech:meta_item_1:32314>],[null]).remove();
