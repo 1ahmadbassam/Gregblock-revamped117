@@ -38,22 +38,6 @@ val bender = RecipeMap.getByName("metal_bender");
 val assline = RecipeMap.getByName("assembly_line");
 val blast_furnace = RecipeMap.getByName("blast_furnace");
 
-//Hammer recipes
-hammer.findRecipe(8,[<minecraft:cobblestone>],[null]).remove();
-
-hammer.recipeBuilder().inputs([<ore:cobblestone>]).outputs([<minecraft:gravel>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:gravel>]).outputs([<minecraft:sand>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:sand>]).outputs([<exnihilocreatio:block_dust>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:netherrack>]).outputs([<exnihilocreatio:block_netherrack_crushed>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:endstone>]).outputs([<exnihilocreatio:block_endstone_crushed>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<appliedenergistics2:sky_stone_block>]).outputs([<exnihilocreatio:block_skystone_crushed>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:stoneDiorite>]).outputs([<exnihilocreatio:block_diorite_crushed>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:stoneAndesite>]).outputs([<exnihilocreatio:block_andesite_crushed>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<ore:stoneGranite>]).outputs([<exnihilocreatio:block_granite_crushed>]).duration(16).EUt(10).buildAndRegister();
-hammer.recipeBuilder().inputs([<exnihilocreatio:block_granite_crushed>]).outputs([<minecraft:sand:1>]).duration(16).EUt(10).buildAndRegister();
-
-lathe.recipeBuilder().inputs([<ore:stoneSmooth>]).outputs([<exnihilocreatio:item_material:6>,<gregtech:meta_item_1:1328>*2]).duration(500).EUt(16).buildAndRegister();
-
 //Anvil
 recipes.remove(<minecraft:anvil>);
 alloy.findRecipe(64,[<minecraft:iron_ingot>*31,<gregtech:meta_item_1:32314>],[null]).remove();
@@ -238,17 +222,6 @@ thermal_sep.recipeBuilder().inputs(<nuclearcraft:depleted_fuel_thorium>).outputs
 thermal_sep.recipeBuilder().inputs(<nuclearcraft:depleted_fuel_uranium:2>).outputs(<nuclearcraft:plutonium:2>,<nuclearcraft:uranium:8>*4).duration(500).EUt(48).buildAndRegister();
 thermal_sep.recipeBuilder().inputs(<nuclearcraft:depleted_fuel_mixed_oxide>).outputs(<nuclearcraft:plutonium:10>,<nuclearcraft:plutonium>*3).duration(500).EUt(48).buildAndRegister();
 thermal_sep.recipeBuilder().inputs(<nuclearcraft:depleted_fuel_uranium:4>).outputs(<gregtech:meta_item_1:2307>*2,<gregtech:meta_item_1:2310>).duration(500).EUt(48).buildAndRegister();
-
-
-//Ex Nihilo - Barrel Recipes
-bath.recipeBuilder().inputs([<ore:dust>]).fluidInputs([<liquid:water>*1000]).outputs([<minecraft:clay>]).EUt(1).duration(16).buildAndRegister();
-bath.recipeBuilder().inputs([<ore:dustRedstone>]).fluidInputs([<liquid:lava>*1000]).outputs([<minecraft:netherrack>]).EUt(1).duration(16).buildAndRegister();
-bath.recipeBuilder().inputs([<ore:dustGlowstone>]).fluidInputs([<liquid:deuterium>*1000]).outputs([<minecraft:end_stone>]).EUt(1).duration(16).buildAndRegister();
-bath.recipeBuilder().inputs([<ore:sand>]).fluidInputs([<liquid:witchwater>*1000]).outputs([<minecraft:soul_sand>]).EUt(1).duration(16).buildAndRegister();
-bath.recipeBuilder().inputs([<appliedenergistics2:material:45>]).fluidInputs([<liquid:lava>*1000]).outputs([<appliedenergistics2:sky_stone_block>]).EUt(1).duration(16).buildAndRegister();
-bath.recipeBuilder().inputs([<minecraft:brown_mushroom>]).fluidInputs([<liquid:milk>*1000]).outputs([<minecraft:slime>,<minecraft:slime_ball>]).EUt(2).duration(20).buildAndRegister();
-bath.recipeBuilder().inputs([<minecraft:red_mushroom>]).fluidInputs([<liquid:milk>*1000]).outputs([<minecraft:slime>,<minecraft:slime_ball>]).EUt(2).duration(20).buildAndRegister();
-reactor.recipeBuilder().notConsumable(<minecraft:mycelium>).fluidInputs([<liquid:water>*1000]).fluidOutputs([<liquid:witchwater>*1000]).EUt(4).duration(80).buildAndRegister();
 
 //Project Red
 assembler.recipeBuilder().inputs([<projectred-core:resource_item>]).fluidInputs([<liquid:redstone>*144]).outputs([<projectred-core:resource_item:1>]).EUt(16).duration(200).buildAndRegister();

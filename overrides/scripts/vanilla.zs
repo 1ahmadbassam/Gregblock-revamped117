@@ -1,24 +1,6 @@
 import crafttweaker.item.IItemStack as IItemStack;
 import crafttweaker.oredict.IOreDictEntry as IOreDictEntry;
 
-//Vanilla
-//No exploits
-recipes.remove(<minecraft:dirt:1>);
-recipes.addShapeless(<minecraft:dirt:1>*4,[<ore:dirt>,<ore:gravel>,<ore:dirt>,<ore:gravel>]);
-
-// Add dirt doubling recipe
-mods.exnihilocreatio.Sieve.addStringMeshRecipe(<minecraft:dirt:1>, <minecraft:dirt>, 1.0);
-mods.exnihilocreatio.Sieve.addStringMeshRecipe(<minecraft:dirt:1>, <minecraft:dirt>, 0.4);
-mods.exnihilocreatio.Sieve.addStringMeshRecipe(<minecraft:dirt:1>, <minecraft:gravel>, 0.4);
-
-//Glass
-furnace.remove(<minecraft:glass>);
-furnace.addRecipe(<minecraft:glass>,<tconstruct:clear_glass>);
-recipes.addShaped(<gregtech:meta_item_1:2220>, [
-[<ore:gemFlint>],
-[<gregtech:meta_tool:12>]
-]);
-
 //Remove vanilla tools
 mods.jei.JEI.removeAndHide(<minecraft:wooden_sword>);
 mods.jei.JEI.removeAndHide(<minecraft:wooden_shovel>);
@@ -49,80 +31,6 @@ mods.jei.JEI.removeAndHide(<minecraft:diamond_shovel>);
 //ProjectRed-ifying Vanilla
 mods.jei.JEI.removeAndHide(<minecraft:repeater>);
 mods.jei.JEI.removeAndHide(<minecraft:comparator>);
-
-//Ex Nihilo
-//Gregify Ex Nihilo
-recipes.remove(<ore:stickStone>);
-recipes.addShaped(<exnihilocreatio:item_material:6>,[
-[<gregtech:meta_tool:9>],
-[null,<ore:stone>]
-]);
-recipes.remove(<exnihilocreatio:item_material:7>);
-recipes.addShaped(<exnihilocreatio:item_material:7>,[
-[<ore:stickStone>,<ore:stone>,<ore:stickStone>],
-[<ore:stone>,<gregtech:meta_tool:11>,<ore:stone>],
-[<ore:stickStone>,<ore:stone>,<ore:stickStone>]
-]);
-recipes.remove(<exnihilocreatio:item_mesh:2>);
-recipes.addShaped(<exnihilocreatio:item_mesh:2>,[
-[<ore:stickTinAlloy>,<minecraft:string>,<ore:stickTinAlloy>],
-[<minecraft:string>,<ore:stickTinAlloy>,<minecraft:string>],
-[<ore:stickTinAlloy>,<minecraft:string>,<ore:stickTinAlloy>]
-]);
-recipes.remove(<exnihilocreatio:item_mesh:3>);
-recipes.addShaped(<exnihilocreatio:item_mesh:3>,[
-[<ore:stickSteel>,<minecraft:string>,<ore:stickSteel>],
-[<minecraft:string>,<ore:stickSteel>,<minecraft:string>],
-[<ore:stickSteel>,<minecraft:string>,<ore:stickSteel>]
-]);
-recipes.remove(<exnihilocreatio:item_mesh:4>);
-recipes.addShaped(<exnihilocreatio:item_mesh:4>,[
-[<ore:stickAluminium>,<minecraft:string>,<ore:stickAluminium>],
-[<minecraft:string>,<ore:stickAluminium>,<minecraft:string>],
-[<ore:stickAluminium>,<minecraft:string>,<ore:stickAluminium>]
-]);
-
-recipes.remove(<exnihilocreatio:block_end_cake>);
-recipes.addShaped(<exnihilocreatio:block_end_cake>,[
-[<forge:bucketfilled>.withTag({FluidName: "if.pink_slime", Amount: 1000}).onlyWithTag({FluidName: "if.pink_slime", Amount: 1000}),<forge:bucketfilled>.withTag({FluidName: "if.pink_slime", Amount: 1000}).onlyWithTag({FluidName: "if.pink_slime", Amount: 1000}),<forge:bucketfilled>.withTag({FluidName: "if.pink_slime", Amount: 1000}).onlyWithTag({FluidName: "if.pink_slime", Amount: 1000})],
-[<ore:gemEnderEye>,<gregtech:meta_item_1:32725>,<ore:gemEnderEye>],
-[<ore:dustHsss>,<ore:dustNaquadria>,<ore:dustHsss>]
-]);
-
-//Only the stone hammer
-mods.jei.JEI.removeAndHide(<exnihilocreatio:hammer_wood>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:hammer_iron>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:hammer_gold>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:hammer_diamond>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_crucible_wood>);
-
-//Stone Hammer Change
-recipes.remove(<exnihilocreatio:hammer_stone>);
-recipes.addShaped(<exnihilocreatio:hammer_stone>,[
-[<minecraft:cobblestone>,<minecraft:cobblestone>],
-[<minecraft:cobblestone>,<minecraft:cobblestone>,<minecraft:stick>],
-[<minecraft:cobblestone>,<minecraft:cobblestone>]
-]);
-
-//OreDict Dool Recipes
-recipes.remove(<exnihilocreatio:item_doll:5>);
-recipes.addShaped(<exnihilocreatio:item_doll:5>,[
-[<ore:dustSaltpeter>,<ore:dustRedstone>,<ore:dustSaltpeter>],
-[<ore:dustGlowstone>,<exnihilocreatio:item_material:5>,<ore:dustGlowstone>],
-[<ore:dustSaltpeter>,<minecraft:nether_wart>,<ore:dustSaltpeter>]
-]);
-recipes.remove(<exnihilocreatio:item_doll:6>);
-recipes.addShaped(<exnihilocreatio:item_doll:6>,[
-[<ore:dustObsidian>,<ore:dustRedstone>,<ore:dustObsidian>],
-[<ore:dustGlowstone>,<exnihilocreatio:item_material:5>,<ore:dustGlowstone>],
-[<ore:dustObsidian>,<minecraft:nether_wart>,<ore:dustObsidian>]
-]);
-
-//Remove Water Wheel Setup
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_auto_sifter>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_waterwheel>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_axle_stone>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_grinder>);
 
 //AE2
 mods.jei.JEI.hideCategory("appliedenergistics2.grinder");
@@ -941,31 +849,7 @@ recipes.addShaped(<spikemod:diamond_spike>*4,[
 [<ore:toolHeadSwordDiamond>,<ore:blockDiamond>,<ore:toolHeadSwordDiamond>]
 ]);
 
-//Ex Compressum
-//Remove Compressed Stuff
-mods.jei.JEI.removeAndHide(<excompressum:heavy_sieve:*>);
-mods.jei.JEI.removeAndHide(<excompressum:compressed_hammer_wood>);
-mods.jei.JEI.removeAndHide(<excompressum:compressed_hammer_stone>);
-mods.jei.JEI.removeAndHide(<excompressum:compressed_hammer_iron>);
-mods.jei.JEI.removeAndHide(<excompressum:compressed_hammer_gold>);
-mods.jei.JEI.removeAndHide(<excompressum:compressed_hammer_diamond>);
-mods.jei.JEI.hide(<excompressum:double_compressed_diamond_hammer>);
-mods.jei.JEI.removeAndHide(<excompressum:compressed_crook>);
 
-//Remove Useless Stuff
-mods.jei.JEI.removeAndHide(<excompressum:auto_hammer>);
-mods.jei.JEI.removeAndHide(<excompressum:auto_compressed_hammer>);
-mods.jei.JEI.removeAndHide(<excompressum:auto_sieve>);
-mods.jei.JEI.removeAndHide(<excompressum:bat_zapper>);
-mods.jei.JEI.removeAndHide(<excompressum:ore_smasher>);
-mods.jei.JEI.removeAndHide(<excompressum:ugly_steel_plating>);
-mods.jei.JEI.removeAndHide(<excompressum:auto_heavy_sieve>);
-mods.jei.JEI.removeAndHide(<excompressum:auto_compressor>);
-mods.jei.JEI.removeAndHide(<excompressum:auto_compressor_rationing>);
-mods.jei.JEI.hide(<excompressum:chicken_stick>);
-mods.jei.JEI.hide(<excompressum:iron_mesh>);
-
-mods.jei.JEI.hideCategory("excompressum:chickenStick");
 
 //Storage Drawers
 //Drawer Recipe Changes
@@ -1494,9 +1378,6 @@ recipes.addShaped(<minecraft:hopper_minecart>,[
 [<minecraft:minecart>]
 ]);
 
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_auto_sifter>);
-mods.jei.JEI.removeAndHide(<exnihilocreatio:hive:*>);
-
 recipes.remove(<pneumaticcraft:aerial_interface>);
 recipes.addShaped(<pneumaticcraft:aerial_interface>,[
 [<pneumaticcraft:pressure_chamber_wall>,<pneumaticcraft:omnidirectional_hopper>,<pneumaticcraft:pressure_chamber_wall>],
@@ -1860,24 +1741,8 @@ mods.jei.JEI.removeAndHide(<floodlights:carbon_dissolver>);
 mods.jei.JEI.removeAndHide(<floodlights:carbon_lantern>);
 mods.jei.JEI.removeAndHide(<floodlights:carbon_floodlight>);
 
-//ContentTweaker
 //Custom Fuels
-furnace.setFuel(<contenttweaker:uncompressed_charcoal>, 200);
-furnace.setFuel(<contenttweaker:uncompressed_lignite_coal>, 200);
-furnace.setFuel(<contenttweaker:uncompressed_coal_coke>, 400);
-furnace.setFuel(<contenttweaker:uncompressed_lignite_coke>, 400);
-
 furnace.setFuel(<forge:bucketfilled>.withTag({FluidName: "creosote", Amount: 1000}), 6400);
-
-recipes.addShapeless(<contenttweaker:uncompressed_charcoal>*8,[<minecraft:coal:1>]);
-recipes.addShapeless(<minecraft:coal:1>,[<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>,<contenttweaker:uncompressed_charcoal>]);
-recipes.addShapeless(<contenttweaker:uncompressed_lignite_coal>*6,[<ore:gemLignite>]);
-recipes.addShapeless(<gregtech:meta_item_1:8211>,[<contenttweaker:uncompressed_lignite_coal>,<contenttweaker:uncompressed_lignite_coal>,<contenttweaker:uncompressed_lignite_coal>,<contenttweaker:uncompressed_lignite_coal>,<contenttweaker:uncompressed_lignite_coal>,<contenttweaker:uncompressed_lignite_coal>]);
-
-recipes.addShapeless(<contenttweaker:uncompressed_coal_coke>*8,[<ore:fuelCoke>]);
-recipes.addShapeless(<gregtech:meta_item_1:8997>,[<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>,<contenttweaker:uncompressed_coal_coke>]);
-recipes.addShapeless(<contenttweaker:uncompressed_lignite_coke>*6,[<ore:gemLigniteCoke>]);
-recipes.addShapeless(<gregtech:meta_item_1:8879>,[<contenttweaker:uncompressed_lignite_coke>,<contenttweaker:uncompressed_lignite_coke>,<contenttweaker:uncompressed_lignite_coke>,<contenttweaker:uncompressed_lignite_coke>,<contenttweaker:uncompressed_lignite_coke>,<contenttweaker:uncompressed_lignite_coke>]);
 
 //PackagedAuto
 //General recipes
@@ -2131,6 +1996,3 @@ recipes.addShaped(<projectred-fabrication:ic_machine:1>,[
 [<gregtech:meta_item_1:32600>,<gregtech:machine:501>,<gregtech:meta_item_1:32600>],
 [<ore:circuitBasic>,<ore:plateDiamond>,<ore:circuitBasic>]
 ]);
-
-//Revamped fix
-mods.jei.JEI.removeAndHide(<exnihilocreatio:block_end_cake>);
