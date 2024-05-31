@@ -183,5 +183,10 @@
     "value": 0.08,
     "compostBlock": "minecraft:dirt:0",
     "color": "23630e"
+  },
+  "ore:dustWood": {
+    "value": 0.0275,
+    "compostBlock": "minecraft:dirt:0",
+    "color": "533f19"
   }
 }

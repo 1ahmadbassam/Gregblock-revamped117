@@ -232,5 +232,14 @@
       "chance": 1.0,
       "fortuneChance": 0.0
     }
+  ],
+  "ore:logWood":[
+    {
+      "item": "gregtech:meta_item_1:2196",
+      "amount": 2,
+      "miningLevel": 0,
+      "chance": 1.0,
+      "fortuneChance": 0.0
+    }
   ]
 }

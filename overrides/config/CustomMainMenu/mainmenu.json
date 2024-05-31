@@ -144,7 +144,7 @@
             "imageHeight": "320",
             "action" : {
                 "type" : "openLink",
-                "link" : "https://github.com/programgames/Gregblock-revamped/issues"
+                "link" : "https://github.com/1ahmadbassam/GregblockUnofficial/issues"
             }
         },
 
@@ -172,54 +172,6 @@
             "color": -1,
             "hoverColor": -1,
             "alignment" : "bottom_right"
-        },
-        "songs":{
-            "text" : "Menu Songs (all by Kevin MacLeod):",
-            "posX" : -114,
-            "posY" : -34,
-            "fontSize": 0.6,
-            "color": -1,
-            "hoverColor": -1,
-            "alignment" : "bottom_right"
-        },
-        "song1":{
-            "text" : "Gaslamp Funworks",
-            "posX" : -61,
-            "posY" : -28,
-            "fontSize": 0.6,
-            "color": -1,
-            "hoverColor": -1,
-            "alignment" : "bottom_right",
-            "action" : {
-                "type" : "openLink",
-                "link" : "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100826"
-            }
-        },
-        "song2":{
-            "text" : "The Cannery",
-            "posX" : -46,
-            "posY" : -22,
-            "fontSize": 0.6,
-            "color": -1,
-            "hoverColor": -1,
-            "alignment" : "bottom_right",
-            "action" : {
-                "type" : "openLink",
-                "link" : "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100845"
-            }
-        },
-        "song3":{
-            "text" : "Industrial Revolution",
-            "posX" : -70,
-            "posY" : -16,
-            "fontSize": 0.6,
-            "color": -1,
-            "hoverColor": -1,
-            "alignment" : "bottom_right",
-            "action" : {
-                "type" : "openLink",
-                "link" : "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100811"
-            }
         },
         "forge": {
             "text": "Minecraft #forgeversion#-#mcversion#",

@@ -77,18 +77,6 @@ item.microblockcbe:saw_diamond.name=Diamond Multipart Saw
 
 tile.omnidirectional_hopper.name=Hopper
 
-recipemap.alloy_smelter.name=Shape Smelter
-gregtech.machine.steam_alloy_smelter_bronze.name=Steam Shape Smelter
-gregtech.machine.steam_alloy_smelter_steel.name=High Pressure Shape Smelter
-gregtech.machine.alloy_smelter.lv.name=Basic Shape Smelter
-gregtech.machine.alloy_smelter.mv.name=Advanced Shape Smelter
-gregtech.machine.alloy_smelter.hv.name=Advanced Shape Smelter II
-gregtech.machine.alloy_smelter.ev.name=Advanced Shape Smelter III
-gtadditions.machine.alloy_smelter.iv.name=Advanced Shape Smelter IV
-gtadditions.machine.alloy_smelter.luv.name=Advanced Shape Smelter V
-gtadditions.machine.alloy_smelter.zpm.name=Advanced Shape Smelter VI
-gtadditions.machine.alloy_smelter.uv.name=Advanced Shape Smelter VII
-
 tile.nuclearcraft.voltaic_pile_basic.name=Basic Voltaic Pile
 tile.nuclearcraft.voltaic_pile_advanced.name=Good Voltaic Pile
 tile.nuclearcraft.voltaic_pile_du.name=Advanced Voltaic Pile

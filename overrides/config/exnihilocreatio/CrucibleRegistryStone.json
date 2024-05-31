@@ -43,18 +43,6 @@
     "fluid": "lava",
     "amount": 500
   },
-  "gregblockutils:gbpebble:0": {
-    "fluid": "lava",
-    "amount": 125
-  },
-  "gregblockutils:gbpebble:1": {
-    "fluid": "lava",
-    "amount": 125
-  },
-  "gregblockutils:gbpebble:3": {
-    "fluid": "lava",
-    "amount": 125
-  },
   "exnihilocreatio:item_pebble:1": {
     "fluid": "lava",
     "amount": 125
@@ -64,6 +52,22 @@
     "amount": 125
   },
   "exnihilocreatio:item_pebble:3": {
+    "fluid": "lava",
+    "amount": 125
+  },
+  "exnihilocreatio:item_pebble:4": {
+    "fluid": "lava",
+    "amount": 125
+  },
+  "exnihilocreatio:item_pebble:5": {
+    "fluid": "lava",
+    "amount": 125
+  },
+  "exnihilocreatio:item_pebble:6": {
+    "fluid": "lava",
+    "amount": 125
+  },
+  "exnihilocreatio:item_pebble:7": {
     "fluid": "lava",
     "amount": 125
   },
