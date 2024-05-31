@@ -47,9 +47,6 @@ alloy.recipeBuilder().inputs(<gregtech:meta_item_1:10197>*31,<gregtech:meta_item
 alloy.recipeBuilder().inputs(<minecraft:iron_ingot>*31,<ore:blockIron>).outputs([<minecraft:anvil>]).EUt(32).duration(30000).buildAndRegister();
 alloy.recipeBuilder().inputs(<gregtech:meta_item_1:10197>*31,<ore:blockIron>).outputs([<minecraft:anvil>]).EUt(32).duration(15000).buildAndRegister();
 
-//Prismarine Crystals
-hammer.recipeBuilder().inputs([<minecraft:prismarine_shard>]).outputs([<minecraft:prismarine_crystals>*2]).EUt(16).duration(20).buildAndRegister();
-
 //Hopper Replacement
 assembler.findRecipe(2,[<gregtech:meta_item_1:12033>*5,<minecraft:chest>],[null]).remove();
 assembler.findRecipe(2,[<gregtech:meta_item_1:12197>*5,<minecraft:chest>],[null]).remove();
